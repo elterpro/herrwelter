@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    {% set isBackend = ( ( ('Provider' in app.request.attributes.get("_controller")) or ('Employee' in app.request.attributes.get("_controller")) )
+                            and ( 'register' not in app.request.uri) ) %}
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets_base %}
+            <link rel="stylesheet" type="text/css" href="/css/main.css">
+            {% block stylesheets %}{% endblock %}
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    </head>
+    <body class="
+    {% if not app.user %}role-visitor {% endif %}
+    {% if is_granted('ROLE_CUSTOMER') %}role-customer{% endif %}
+    {% if is_granted('ROLE_PROVIDER') %}role-provider{% endif %}
+    {% if is_granted('ROLE_EMPLOYEE') %}role-employee{% endif %}
+    {% if isBackend %}backend{% endif %}
+    ">
+        {% block body_base %}
+            {% include 'navigation.html.twig' %}
+            {% block body %}{% endblock %}
+            {% include 'footer.html.twig' %}
+        {% endblock %}
+
+        {% block javascripts_base %}
+            <script type="text/javascript" src="/js/jquery.min.js"></script>
+            <script type="text/javascript" src="/js/jquery.fittext.js"></script>
+            <script type="text/javascript" src="/js/jquery.slimscroll.min.js"></script>
+            <script type="text/javascript" src="/js/jquery.chosen.min.js"></script>
+            <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+            <script>
+                function debouncer( func , timeout ) {
+                    var timeoutID , timeout = timeout || 200;
+                    return function () {
+                        var scope = this , args = arguments;
+                        clearTimeout( timeoutID );
+                        timeoutID = setTimeout( function () {
+                            func.apply( scope , Array.prototype.slice.call( args ) );
+                        } , timeout );
+                    }
+                }
+                $(function() {
+                    //new WOW().init();
+                    $('h1').fitText(1.0, {minFontSize: '62px'});
+                });
+            </script>
+            {% block javascripts %}{% endblock %}
+        {% endblock %}
+    </body>
+</html>

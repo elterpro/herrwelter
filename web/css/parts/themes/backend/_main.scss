@@ -1,0 +1,12 @@
+@import "../../helpers/variables";
+
+.backend {
+  background-color: $color-backend-bg;
+  color: $color-backend;
+
+  @import "base/typography";
+
+  @import "layout/topbar";
+  @import "layout/sidebar";
+  @import "layout/content";
+}

@@ -1,0 +1,18 @@
+@import "../helpers/variables";
+
+footer {
+  background-color: $color-general-darkGrayBackground;
+  color: $color-general-gray;
+  font-family: "Merriweather", serif;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      line-height: 3rem;
+    }
+    &.main {
+      color: white;
+    }
+  }
+}

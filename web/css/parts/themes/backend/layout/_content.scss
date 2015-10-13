@@ -1,0 +1,16 @@
+@import "../../../helpers/variables";
+
+.backend-content {
+  margin-top: $n-backend-topbar-height;
+  @media (min-width: $screen-md-min) {
+    margin-left: $n-backend-topbar-left-width;
+  }
+  .content-header {
+    margin-bottom: 15px;
+    background-color: white;
+    h1 {
+      text-transform: uppercase;
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import "../helpers/variables";
+
+$navbar-color-background : $color-goldfish-lightOrange;
+$navbar-color-font : white;
+$navbar-color-font-hover : $color-goldfish-blue;
+nav {
+  &.navbar {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+  }
+  &.navbar-default {
+    background-color: $navbar-color-background;
+    color: $navbar-color-font;
+    .navbar-toggle {
+      border-color: $navbar-color-font;
+      .icon-bar {
+        background-color: $navbar-color-font;
+      }
+      &:hover, &:focus {
+        background-color: $navbar-color-font;
+        .icon-bar {
+          background-color: $navbar-color-background;
+        }
+      }
+    }
+    .navbar-brand {
+      color: $navbar-color-font;
+      padding: 5px 15px;
+      &:hover {
+        color: $navbar-color-font-hover;
+      }
+    }
+    .navbar-nav {
+      > li {
+        > a {
+          color: $navbar-color-font;
+          @media (min-width: $screen-sm-min) {
+            border-bottom: 3px solid transparent;
+          }
+          &:hover, &:focus {
+            color: $navbar-color-font-hover;
+            @media (min-width: $screen-sm-min) {
+              border-bottom: 3px solid $navbar-color-font-hover;
+            }
+          }
+        }
+      }
+    }
+    form {
+      .btn {
+        @media (max-width: $screen-xs-max) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

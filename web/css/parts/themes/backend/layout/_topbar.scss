@@ -1,0 +1,71 @@
+@import "../../../helpers/variables";
+@import "../../../base/typography";
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $n-backend-topbar-height;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16);
+  a {
+    cursor: pointer;
+    color: $color-backend;
+    &:hover, &:focus, &:active {
+      color: $color-goldfish-orange;
+    }
+  }
+  .topbar-left {
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: $n-backend-topbar-left-width;
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+    }
+    height: 100%;
+    background: /*url("../img/icons/herrwelter_icon.png") no-repeat center center*/ $color-goldfish-lightBlue;
+    padding: 0 1rem;
+    text-align: left;
+    @media (min-width: $screen-md-min) {
+      text-align: center;
+      .topbar-nav {
+        display: none;
+      }
+    }
+  }
+  .topbar-nav {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: $n-backend-topbar-height;
+    li {
+      display: inline-block;
+      height: $n-backend-topbar-height;
+      a {
+        display: block;
+        height: 100%;
+        padding: 0 1rem;
+        &:hover, &:focus, &:active {
+          background-color: transparentize($color-backend, .9);
+        }
+        i.fa {
+          font-size: $n-backend-topbar-height * .5;
+          line-height: $n-backend-topbar-height;
+        }
+      }
+    }
+  }
+  .topbar-brand {
+    @extend .font-leagueGothic;
+    font-size: $n-backend-topbar-height * .5;
+    line-height: $n-backend-topbar-height;
+    text-transform: uppercase;
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+    }
+  }
+}

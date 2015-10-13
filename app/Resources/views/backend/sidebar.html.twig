@@ -1,0 +1,42 @@
+<div class="sidebar" id="sidebar"><div id="sidebar-inner">
+    <div class="sidebar-header">
+        <div class="container-fluid">
+            <div class="sidebar-userInfo">
+                <div class="sidebar-userInfo-pic">
+                    <img src="/img/icons/herrwelter.png">
+                </div>
+                <div class="sidebar-userInfo-desc">
+                    <ul>
+                        <li>{{ app.user.forename }} {{ app.user.surname }}</li>
+                        <li>{{ app.user.username }}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row sidebar-userControl">
+                <div class="col-xs-3">
+                    <a href="{{ path('logout') }}"><i class="fa fa-power-off"></i></a>
+                </div>
+                <div class="col-xs-3">
+                    <a><i class="fa fa-user"></i></a>
+                </div>
+                <div class="col-xs-3">
+                    <a><i class="fa fa-info-circle"></i></a>
+                </div>
+                <div class="col-xs-3">
+                    <a><i class="fa fa-gear"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-nav">
+        <ul>
+            <li class="title">Allgemein</li>
+            <li><a><i class="fa fa-tachometer"></i> Dashboard</a></li>
+            <li class="title">Dienstleistungen</li>
+            <li><a href="{{ path('provider_service_add') }}"><i class="fa fa-plus"></i> Dienstleistung hinzufügen</a></li>
+            <li class="title">ALPHA Admin-Tools</li>
+            <li><a><i class="fa fa-language"></i> {{ 'word.translation'|trans }}</a></li>
+            <li><a><i class="fa fa-diamond"></i> {{ 'word.services'|trans }}</a></li>
+        </ul>
+    </div>
+</div></div>

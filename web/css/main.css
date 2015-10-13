@@ -1,0 +1,351 @@
+@import url(bootstrap.min.css);
+@import url(font-awesome.min.css);
+@import url(parts/vendor/chosen/chosen.min.css);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,700);
+@import url(../../fonts/gothic/stylesheet.css);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,700);
+@import url(../../fonts/gothic/stylesheet.css);
+.font-leagueGothic, h1, .backend h1, .backend .topbar .topbar-brand {
+  font-family: "League Gothic", Arial, sans-serif; }
+
+.font-merriweather, h2, h3, .backend h2, .backend h3, .backend .sidebar .sidebar-nav ul li a {
+  font-family: "Merriweather", serif; }
+
+html, body {
+  font-size: 16px; }
+
+.text-gimmeAttention, .features p, .history p {
+  line-height: 2.5rem;
+  font-size: 1.8rem; }
+
+.bg-blue, .history .badge {
+  background-color: #69D2E7;
+  color: white; }
+
+.bg-lightBlue {
+  background-color: #A7DBDB;
+  color: white; }
+
+.bg-orange {
+  background-color: #FA6900;
+  color: white; }
+
+.bg-lightOrange {
+  background-color: #F38630;
+  color: white; }
+
+.bg-white {
+  background-color: white;
+  color: #333; }
+  .bg-white.gimmeBorder {
+    border-color: #333; }
+
+.bg-lightGray {
+  background-color: #f4f4f4; }
+
+.gimmeBorder {
+  border: 2px solid white; }
+
+.btn-orange {
+  color: white;
+  background-color: #FA6900;
+  border-color: white; }
+  .btn-orange:hover, .btn-orange:focus {
+    color: #FA6900;
+    background-color: white;
+    border-color: inherit; }
+
+nav.navbar {
+  margin: 0;
+  border: none;
+  border-radius: 0; }
+nav.navbar-default {
+  background-color: #F38630;
+  color: white; }
+  nav.navbar-default .navbar-toggle {
+    border-color: white; }
+    nav.navbar-default .navbar-toggle .icon-bar {
+      background-color: white; }
+    nav.navbar-default .navbar-toggle:hover, nav.navbar-default .navbar-toggle:focus {
+      background-color: white; }
+      nav.navbar-default .navbar-toggle:hover .icon-bar, nav.navbar-default .navbar-toggle:focus .icon-bar {
+        background-color: #F38630; }
+  nav.navbar-default .navbar-brand {
+    color: white;
+    padding: 5px 15px; }
+    nav.navbar-default .navbar-brand:hover {
+      color: #69D2E7; }
+  nav.navbar-default .navbar-nav > li > a {
+    color: white; }
+    @media (min-width: 768px) {
+      nav.navbar-default .navbar-nav > li > a {
+        border-bottom: 3px solid transparent; } }
+    nav.navbar-default .navbar-nav > li > a:hover, nav.navbar-default .navbar-nav > li > a:focus {
+      color: #69D2E7; }
+      @media (min-width: 768px) {
+        nav.navbar-default .navbar-nav > li > a:hover, nav.navbar-default .navbar-nav > li > a:focus {
+          border-bottom: 3px solid #69D2E7; } }
+  @media (max-width: 767px) {
+    nav.navbar-default form .btn {
+      width: 100%; } }
+
+.monster {
+  padding: 5rem 0; }
+  .monster h1 {
+    margin: 0; }
+  .monster h2 {
+    font-weight: bold; }
+  .monster .pushMe-top {
+    margin-top: 5rem; }
+  .monster .form-inline .form-group {
+    width: 100%; }
+    .monster .form-inline .form-group .form-control {
+      width: 100%;
+      text-align: center; }
+  .monster .form-inline .btn {
+    width: 100%; }
+
+.bg-blue, .history .badge {
+  background-color: #69D2E7;
+  color: white; }
+
+.bg-lightBlue {
+  background-color: #A7DBDB;
+  color: white; }
+
+.bg-orange {
+  background-color: #FA6900;
+  color: white; }
+
+.bg-lightOrange {
+  background-color: #F38630;
+  color: white; }
+
+.bg-white {
+  background-color: white;
+  color: #333; }
+  .bg-white.gimmeBorder {
+    border-color: #333; }
+
+.bg-lightGray {
+  background-color: #f4f4f4; }
+
+.gimmeBorder {
+  border: 2px solid white; }
+
+.font-leagueGothic, h1, .backend h1, .backend .topbar .topbar-brand {
+  font-family: "League Gothic", Arial, sans-serif; }
+
+.font-merriweather, h2, h3, .backend h2, .backend h3, .backend .sidebar .sidebar-nav ul li a {
+  font-family: "Merriweather", serif; }
+
+html, body {
+  font-size: 16px; }
+
+.text-gimmeAttention, .features p, .history p {
+  line-height: 2.5rem;
+  font-size: 1.8rem; }
+
+.badge.circle, .history .badge {
+  border-radius: 40px;
+  padding: 25px 31px;
+  font-size: 3rem; }
+
+.box {
+  padding: 2rem; }
+  .box h1, .box h2, .box h3, .box h4, .box h5, .box h6 {
+    margin-top: 0; }
+  .box.box-keywords h3 {
+    margin-bottom: 2rem; }
+  .box.box-keywords ul {
+    margin: 0 0 2rem 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.05rem; }
+
+.features {
+  text-align: center; }
+  .features p {
+    padding: 1rem; }
+  .features .fa {
+    color: #F38630;
+    font-size: 15rem; }
+
+.history {
+  text-align: center; }
+  .history .row {
+    margin: 7rem 0; }
+  .history img {
+    width: 100%;
+    height: auto; }
+  .history p {
+    padding: 1rem; }
+
+footer {
+  background-color: #1d1d1d;
+  color: #888;
+  font-family: "Merriweather", serif; }
+  footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    footer ul li {
+      line-height: 3rem; }
+    footer ul.main {
+      color: white; }
+
+.backend {
+  background-color: #e4e9f0;
+  color: #1d1d1d;
+  @import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,700);
+  @import url(../../fonts/gothic/stylesheet.css);
+  @import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,700);
+  @import url(../../fonts/gothic/stylesheet.css); }
+  .backend a {
+    cursor: pointer;
+    color: #69D2E7; }
+    .backend a:hover, .backend a:active, .backend a:focus {
+      color: #F38630; }
+  .backend h1 {
+    text-align: center;
+    text-transform: uppercase; }
+  .backend .font-leagueGothic, .backend h1, .backend .topbar .topbar-brand {
+    font-family: "League Gothic", Arial, sans-serif; }
+  .backend .font-merriweather, .backend h2, .backend h3, .backend .sidebar .sidebar-nav ul li a {
+    font-family: "Merriweather", serif; }
+  .backend html, .backend body {
+    font-size: 16px; }
+  .backend .text-gimmeAttention, .backend .features p, .features .backend p, .backend .history p, .history .backend p {
+    line-height: 2.5rem;
+    font-size: 1.8rem; }
+  .backend .topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16); }
+    .backend .topbar a {
+      cursor: pointer;
+      color: #1d1d1d; }
+      .backend .topbar a:hover, .backend .topbar a:focus, .backend .topbar a:active {
+        color: #FA6900; }
+    .backend .topbar .topbar-left {
+      display: inline-block;
+      position: relative;
+      float: left;
+      width: 250px;
+      height: 100%;
+      background: #A7DBDB;
+      padding: 0 1rem;
+      text-align: left; }
+      @media (max-width: 767px) {
+        .backend .topbar .topbar-left {
+          width: 100%; } }
+      @media (min-width: 992px) {
+        .backend .topbar .topbar-left {
+          text-align: center; }
+          .backend .topbar .topbar-left .topbar-nav {
+            display: none; } }
+    .backend .topbar .topbar-nav {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      height: 60px; }
+      .backend .topbar .topbar-nav li {
+        display: inline-block;
+        height: 60px; }
+        .backend .topbar .topbar-nav li a {
+          display: block;
+          height: 100%;
+          padding: 0 1rem; }
+          .backend .topbar .topbar-nav li a:hover, .backend .topbar .topbar-nav li a:focus, .backend .topbar .topbar-nav li a:active {
+            background-color: rgba(29, 29, 29, 0.1); }
+          .backend .topbar .topbar-nav li a i.fa {
+            font-size: 30px;
+            line-height: 60px; }
+    .backend .topbar .topbar-brand {
+      font-size: 30px;
+      line-height: 60px;
+      text-transform: uppercase; }
+      .backend .topbar .topbar-brand:hover, .backend .topbar .topbar-brand:active, .backend .topbar .topbar-brand:focus {
+        text-decoration: none; }
+  .backend .font-leagueGothic, .backend h1, .backend .topbar .topbar-brand {
+    font-family: "League Gothic", Arial, sans-serif; }
+  .backend .font-merriweather, .backend h2, .backend h3, .backend .sidebar .sidebar-nav ul li a {
+    font-family: "Merriweather", serif; }
+  .backend html, .backend body {
+    font-size: 16px; }
+  .backend .text-gimmeAttention, .backend .features p, .features .backend p, .backend .history p, .history .backend p {
+    line-height: 2.5rem;
+    font-size: 1.8rem; }
+  .backend .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    padding-top: 60px;
+    z-index: 900;
+    width: 250px;
+    height: 100vh;
+    background-color: #1d1d1d;
+    color: white; }
+    @media (min-width: 992px) {
+      .backend .sidebar {
+        left: 0; } }
+    .backend .sidebar .sidebar-header {
+      padding: 2rem 0;
+      background-color: #373737; }
+      .backend .sidebar .sidebar-header .sidebar-userInfo {
+        display: table;
+        margin-bottom: 1rem; }
+        .backend .sidebar .sidebar-header .sidebar-userInfo > div {
+          display: table-cell;
+          vertical-align: middle; }
+        .backend .sidebar .sidebar-header .sidebar-userInfo img {
+          width: 75px;
+          height: auto; }
+        .backend .sidebar .sidebar-header .sidebar-userInfo ul {
+          margin: 0;
+          padding: 0;
+          list-style: none; }
+      .backend .sidebar .sidebar-header .sidebar-userControl {
+        text-align: center; }
+        .backend .sidebar .sidebar-header .sidebar-userControl a {
+          display: block;
+          font-size: 1.2rem; }
+    .backend .sidebar .sidebar-nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      .backend .sidebar .sidebar-nav ul li.title {
+        padding: 8px 15px;
+        border-top: #373737 1px solid;
+        border-bottom: #373737 1px solid;
+        text-transform: uppercase;
+        color: #6a6a6a; }
+      .backend .sidebar .sidebar-nav ul li a {
+        display: block;
+        padding: 8px 15px;
+        font-size: .8rem; }
+        .backend .sidebar .sidebar-nav ul li a:hover, .backend .sidebar .sidebar-nav ul li a:active, .backend .sidebar .sidebar-nav ul li a:focus, .backend .sidebar .sidebar-nav ul li a.active {
+          background-color: rgba(255, 255, 255, 0.05);
+          text-decoration: none; }
+        .backend .sidebar .sidebar-nav ul li a i.fa {
+          margin-right: 1rem;
+          font-size: 1.2rem; }
+  .backend .backend-content {
+    margin-top: 60px; }
+    @media (min-width: 992px) {
+      .backend .backend-content {
+        margin-left: 250px; } }
+    .backend .backend-content .content-header {
+      margin-bottom: 15px;
+      background-color: white; }
+      .backend .backend-content .content-header h1 {
+        text-transform: uppercase;
+        text-align: left; }
+
+/*# sourceMappingURL=main.css.map */

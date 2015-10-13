@@ -1,0 +1,32 @@
+@import "variables";
+
+.bg-blue {
+  background-color: $color-goldfish-blue;
+  color: white;
+}
+.bg-lightBlue {
+  background-color: $color-goldfish-lightBlue;
+  color: white;
+}
+.bg-orange {
+  background-color: $color-goldfish-orange;
+  color: white;
+}
+.bg-lightOrange {
+  background-color: $color-goldfish-lightOrange;
+  color: white;
+}
+.bg-white {
+  background-color: white;
+  color: #333;
+  &.gimmeBorder {
+    border-color: #333;
+  }
+}
+.bg-lightGray {
+  background-color: $color-general-lightGrayBackground;
+}
+
+.gimmeBorder {
+  border: 2px solid white;
+}

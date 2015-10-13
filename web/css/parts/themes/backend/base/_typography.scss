@@ -1,0 +1,14 @@
+@import "../../../helpers/variables";
+
+a {
+  cursor: pointer;
+  color: $color-goldfish-blue;
+  &:hover, &:active, &:focus {
+    color: $color-goldfish-lightOrange;
+  }
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}

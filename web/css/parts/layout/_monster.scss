@@ -1,0 +1,26 @@
+.monster {
+  padding: 5rem 0;
+  h1 {
+    margin: 0;
+  }
+  h2 {
+    font-weight: bold;
+  }
+
+  .pushMe-top {
+    margin-top: 5rem;
+  }
+
+  .form-inline {
+    .form-group {
+      width: 100%;
+      .form-control {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .btn {
+      width: 100%;
+    }
+  }
+}

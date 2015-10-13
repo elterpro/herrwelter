@@ -1,0 +1,98 @@
+{% extends 'base.html.twig' %}
+
+{% set pathArray   = app.request.pathinfo|split('/') %}
+{% set backendRole = pathArray[1] %}
+{% set mainPage    = pathArray[2]|default('index') %}
+{% set subPage     = pathArray[3]|default('index') %}
+{% set transPrefix = (backendRole~'.'~mainPage~'.'~subPage~'.') %}
+
+{% block body_base %}
+    {% include 'backend/header.html.twig' %}
+    {% include 'backend/sidebar.html.twig' %}
+    <div id="backend-content" class="backend-content">
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        {% block content_header %}
+                            <h2>{% block content_header_heading %}
+                                    {{ ('word.'~mainPage)|trans }}
+                                {% endblock %}</h2>
+                                {% block content_header_pageDescription %}
+                                    {{ ((transPrefix~'description')|trans)|raw }}
+                                {% endblock %}
+                        {% endblock %}
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <ol class="breadcrumb">
+                            <li>{% trans %}breadcrumb.prefix{% endtrans %}</li>
+                            {% block breadcrumb %}
+                            {% endblock %}
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+        $(function(){
+            $("select").chosen();
+            $('#sidebar-inner').slimScroll({
+                height: 'auto',
+                color: '#A7DBDB'
+            });
+            var $topbar_btn_toggleSidebar = $('#topbar-btn-toggleSidebar');
+            var $sidebar = $('#sidebar');
+            var $content = $('#backend-content');
+            function sidebar_show() {
+                if(!$sidebar.is(':visible')) {
+                    $sidebar.show();
+                    $sidebar.animate({
+                        left: 0
+                    });
+                }
+
+            }
+            function sidebar_hide() {
+                if($sidebar.is(':visible')) {
+                    $sidebar.animate({
+                        left: $sidebar.width() * -1
+                    }, 500, function() {
+                        $sidebar.hide();
+                    });
+                }
+            }
+            function sidebar_toggle() {
+                if($sidebar.is(':visible')) {
+                    sidebar_hide();
+                } else {
+                    sidebar_show();
+                }
+            }
+            $topbar_btn_toggleSidebar.click(function(e){
+                e.preventDefault();
+                sidebar_toggle();
+            });
+            $(window).resize( debouncer( function ( e ) {
+                if($(window).width() >= 992) {
+                    sidebar_show();
+                    $content.animate({
+                        marginLeft: $sidebar.width()
+                    });
+                } else {
+                    sidebar_hide();
+                    $content.animate({
+                        marginLeft: 0
+                    });
+                }
+            } ) );
+        });
+    </script>
+{% endblock %}

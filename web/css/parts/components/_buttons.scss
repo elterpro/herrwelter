@@ -1,0 +1,12 @@
+@import "../helpers/variables";
+
+.btn-orange {
+  color: white;
+  background-color: $color-goldfish-orange;
+  border-color: white;
+  &:hover, &:focus {
+    color: $color-goldfish-orange;
+    background-color: white;
+    border-color: inherit;
+  }
+}

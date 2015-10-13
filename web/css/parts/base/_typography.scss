@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,700);
+@import "../../fonts/gothic/stylesheet.css";
+
+.font-leagueGothic {
+  font-family: "League Gothic", Arial, sans-serif;
+}
+
+.font-merriweather {
+  font-family: "Merriweather", serif;
+}
+
+html, body {
+  font-size: 16px;
+}
+
+h1 {
+  @extend .font-leagueGothic;
+}
+h2, h3 {
+  @extend .font-merriweather;
+}
+
+.text-gimmeAttention {
+  line-height: 2.5rem;
+  font-size: 1.8rem;
+}

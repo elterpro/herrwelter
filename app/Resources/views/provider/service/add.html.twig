@@ -1,0 +1,132 @@
+{% extends 'baseBackend.html.twig' %}
+
+{% block content_header %}
+    <h2>Dienstleistung hinzufügen</h2>
+    <p>Hier haben Sie die Möglichkeit eine Dienstleistung den, von Ihnen angebotenen, Dienstleistungen hinzuzufügen.</p>
+{% endblock %}
+
+{% block breadcrumb %}
+    <li><a href="{{ path('provider') }}">Dashboard</a></li>
+    <li class="active">Dienstleistung hinzufügen</li>
+{% endblock %}
+
+{% block body %}
+<div class="panel panel-default text-center">
+    <div class="panel-body">
+        <p>Wir freuen uns, dass Sie Ihre Dienstleistung/en bei herrwelter anbieten möchten. <b>Das Anbieten an sich ist völlig
+        kostenlos.</b> Erst wenn Sie erfolgreich einen, von uns vermittelten, Auftrag ausgeführt haben, ziehen wir Ihnen 5% Vermittlungsprovision von,
+        dem vom Kunden bezahlten, Betrag ab und leiten diesen dann zu Ihnen weiter.</p>
+        <hr>
+        <h4>Passt Ihre Dienstleistung zu herrwelter?</h4>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <div class="box bg-lightGray">
+                    <h4>Standortunabhängig</h4>
+                    <p>Da herrwelter nur Dienstleistungen vermittelt, welche nach Hause bestellt werden können, muss Ihre
+                    Dienstleistung an jedem beliebigem, vom Kunden vorgegebenen, Ort ausführbar sein.</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="box bg-lightGray">
+                    <h4>Spontant & Ungebunden</h4>
+                    <p>Die Dienstleistungen bei herrwelter sollen alle spontan buchbar sein und keiner übermäßigen Vorausplanung
+                    bedarfen. Dadruch dürfen Sie auch keinen Folgeauftrag zwingend erfordern. Die Dienste eines Programmierers
+                    zum Beispiel, wären ungeeignet, da es eine Planungsphase geben würde und man über länger Zeit mit dem
+                    Programmierer im Kontakt bleiben muss.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h2>Erzählen Sie herrwelter von Ihrer Dienstleistung.</h2>
+        <div class="box box-keywords bg-lightOrange">
+            <h3>Finden Sie Ihre Dienstleistung hier?</h3>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                    <h4>Kosmetik & Mode</h4>
+                    <ul>
+                        <li>Stilberater</li>
+                        <li>Schneider</li>
+                        <li>Schuhmacher</li>
+                        <li>Make-Up-Artist</li>
+                        <li>Frisuer</li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                    <h4>Gesundheit & Welness</h4>
+                    <ul>
+                        <li>Massuer</li>
+                        <li>Ernährungsberater</li>
+                        <li>Krankenpfleger</li>
+                        <li>Hausarzt</li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                    <h4>Essen & Party</h4>
+                    <ul>
+                        <li>Getränkelieferant</li>
+                        <li>Partyservice</li>
+                        <li>Cateringservice</li>
+                        <li>Koch</li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                    <h4>Bildung & Kultur</h4>
+                    <ul>
+                        <li>Nachhilfelehrer</li>
+                        <li>Instrumentlehrer</li>
+                        <li>Tutor</li>
+                        <li>Gesangslehrer</li>
+                        <li>Schauspiellehrer</li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                    <h4>Haushaltsnahe</h4>
+                    <ul>
+                        <li>Putzleister</li>
+                        <li>Hausmeister</li>
+                        <li>Hundeausführer</li>
+                        <li>Babysitter</li>
+                        <li>Hausaufpasser</li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                    <h4>Sonstiges</h4>
+                    <ul>
+                        <li>Kellner</li>
+                        <li>Tänzer</li>
+                        <li>Sänger</li>
+                        <li>Fotograf</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="box bg-lightBlue">
+            <h3>Wenn nein, beschreiben Sie sie hier.</h3>
+            <p>Es scheint, als würde herrwelter Dienstleistungen, wie die Ihre, noch nicht kennen! Erzählen Sie uns
+                kurz etwas darüber, damit wir diese überprüfen und kennenlernen können. </p>
+            <form>
+                <div class="form-group">
+                    <label for="branch">Welcher Branche ist Ihre Dienstleistung zuzuordnen? (optional)</label>
+                    <input type="text" id="branch" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="name">Wie nennt sich Ihre Dienstleistung?</label>
+                    <input type="text" id="name" required="required" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="keywords">Welche Worte fallen Ihnen spontan ein, wenn Sie an die Dienstleistung denken? (optional)</label>
+                    <input type="text" id="keywords" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="description">Erklären Sie Ihre Dienstleistung kurz und treffend. (optional)</label>
+                    <textarea id="description" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-orange">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

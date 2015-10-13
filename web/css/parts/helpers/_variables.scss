@@ -1,0 +1,29 @@
+$screen-sm-min: 768px;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-md-min: 992px;
+$screen-sm-max: ($screen-md-min - 1);
+$screen-lg-min: 1200px;
+$screen-md-max: ($screen-lg-min - 1);
+
+//$color-barca-darkGrey : #333333;
+//$color-barca-grey : #424242;
+//$color-barca-blue : #00ccd6;
+//$color-barca-white : #efefef;
+//$color-barca-yellow : #ffd900;
+
+$color-goldfish-blue : #69D2E7;
+$color-goldfish-lightBlue : #A7DBDB;
+$color-goldfish-beige : #E0E4CC;
+$color-goldfish-lightOrange : #F38630;
+$color-goldfish-orange : #FA6900;
+
+$color-general-lightGrayBackground : #f4f4f4;
+$color-general-darkGrayBackground : #1d1d1d;
+$color-general-gray : #888;
+
+$color-backend-lightBlue : #e4e9f0;
+$color-backend-bg : $color-backend-lightBlue;
+$color-backend : $color-general-darkGrayBackground;
+
+$n-backend-topbar-height: 60px;
+$n-backend-topbar-left-width: 250px;
